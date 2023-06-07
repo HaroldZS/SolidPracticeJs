@@ -34,3 +34,5 @@ class FileSystem {
     this.deleteFile(source);
   }
 }
+
+module.exports = FileSystem;
