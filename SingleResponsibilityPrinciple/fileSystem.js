@@ -22,17 +22,6 @@ class FileSystem {
   listFiles() {
     return Object.keys(this.files);
   }
-
-  copyFile(source, destination) {
-    const content = this.readFile(source);
-    this.writeFile(destination, content);
-  }
-
-  moveFile(source, destination) {
-    const content = this.readFile(source);
-    this.writeFile(destination, content);
-    this.deleteFile(source);
-  }
 }
 
 module.exports = FileSystem;
