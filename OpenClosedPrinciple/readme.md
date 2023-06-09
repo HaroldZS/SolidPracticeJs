@@ -1,0 +1,7 @@
+Supongamos que estás desarrollando un sistema de una tienda en línea y tienes una clase llamada Product que representa un producto en el inventario. Cada producto tiene un nombre, un precio y una categoría. Además, tienes una clase llamada ShoppingCart que representa el carrito de compras del usuario.
+
+En este ejemplo, la clase Product representa un producto y tiene métodos para obtener su nombre, precio y categoría. La clase ShoppingCart representa el carrito de compras y tiene métodos para agregar productos, calcular el precio total de los productos en el carrito, calcular el descuento y obtener el precio total con descuento.
+
+El problema con este diseño es que, si en el futuro se desea agregar un nuevo tipo de descuento para otra categoría de productos, sería necesario modificar la clase ShoppingCart y agregar una nueva condición en el método calculateDiscount(). Esto viola el principio de Open-Closed, ya que la clase ShoppingCart no está cerrada para modificaciones.
+
+Para aplicar el principio de Open-Closed, puedes utilizar el patrón de diseño de Estrategia. De esta manera, puedes encapsular la lógica de cálculo de descuento en clases separadas y hacer que la clase ShoppingCart dependa de una interfaz genérica en lugar de implementar la lógica específica en su interior. Esto permitirá agregar nuevas estrategias de descuento sin tener que modificar la clase ShoppingCart.
