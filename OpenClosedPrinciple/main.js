@@ -1,5 +1,7 @@
 const Product = require('./product.js');
 const ShoppingCart = require('./shoppingCart.js');
+// const ElectronicsDiscountStrategy = require('./electronicsDiscountStrategy.js');
+const ClothingDiscountStrategy = require("./clothingDiscountStrategy.js");
 
 
 const product1 = new Product('iPhone', 1000, 'Electronics');
@@ -13,6 +15,10 @@ const cart = new ShoppingCart();
 cart.addProduct(product1);
 cart.addProduct(product2);
 cart.addProduct(product3);
+
+// Configuramos la estrategia de descuento para electrónica
+// cart.setDiscountStrategy(new ElectronicsDiscountStrategy());
+cart.setDiscountStrategy(new ClothingDiscountStrategy());
 
 // Obtenemos el precio total sin descuento
 console.log('Total Price: $', cart.getTotalPrice());
