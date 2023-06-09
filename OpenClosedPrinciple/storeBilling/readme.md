@@ -1,0 +1,3 @@
+Supongamos que estás desarrollando un sistema de facturación para una tienda en línea. Tienes una clase llamada Factura que tiene un método llamado calculateTotal que calcula el total de la factura Invoice. Además, tienes varios tipos de productos, como libros, electrónicos y ropa, y cada tipo de producto tiene un impuesto asociado.
+
+En este ejemplo, el problema radica en el método calculateTotal de la clase Invoice. Si en el futuro se agrega un nuevo tipo de producto, como "alimentos", deberías modificar el código existente y agregar una nueva condición en el bucle for para manejar el nuevo tipo de producto. Esto viola el principio OCP, ya que deberías poder extender el sistema sin modificar el código existente.
