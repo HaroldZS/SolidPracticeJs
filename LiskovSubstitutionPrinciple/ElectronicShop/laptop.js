@@ -5,6 +5,10 @@ class Laptop extends ElectronicDevice {
     super(name, price);
     this.batteryLife = batteryLife;
   }
+
+  printBattery(){ 
+    console.log(this.batteryLife);
+  }
 }
 
 module.exports = Laptop;
