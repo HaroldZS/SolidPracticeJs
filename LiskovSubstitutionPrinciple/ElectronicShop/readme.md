@@ -1,0 +1,5 @@
+Supongamos que estás desarrollando una aplicación para una tienda en línea que vende productos electrónicos. Tienes una clase base llamada ElectronicDevice (dispositivo electrónico) con dos propiedades: name (nombre) y price (precio). Además, tienes una subclase llamada Laptop (computadora portátil) que hereda de ElectronicDevice y agrega una propiedad adicional batteryLife (duración de la batería).
+
+El problema surge cuando intentas utilizar la clase ElectronicDevice como si fuera una instancia de Laptop.
+
+En este caso, printBatteryLife espera recibir una instancia de Laptop, pero le estás pasando una instancia de ElectronicDevice, que no tiene la propiedad batteryLife. Esto viola el principio de sustitución de Liskov porque no se puede sustituir una instancia de una clase base (ElectronicDevice) por una instancia de una subclase (Laptop) sin alterar el comportamiento esperado.
