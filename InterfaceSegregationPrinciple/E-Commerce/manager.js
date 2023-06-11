@@ -1,10 +1,8 @@
-const StoreOperations = require("./storeOperations");
+const IProduct = require("./iProduct");
+const IManagement = require("./iManagement");
 
 class Manager {
-  constructor() {
-    // No se instancia directamente la interfaz StoreOperations
-    // this.store = new StoreOperations();
-  }
+  constructor() { }
 
   /**
    * @param {string} product - Producto a actualizar.
@@ -15,17 +13,10 @@ class Manager {
     console.log(`Manager: Actualizando precio de ${product} a ${newPrice}`);
   }
 
-  /**
-   * Genera un informe de ventas.
-   */
   generateSalesReport() {
     // Implementación de generateSalesReport específica de Manager
     console.log('Manager: Generando informe de ventas');
   }
-
-  // No se implementan los métodos no necesarios
-  // addProduct(product) {}
-  // processOrder(order) {}
 }
 
 module.exports = Manager;

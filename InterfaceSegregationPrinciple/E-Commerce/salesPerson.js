@@ -1,10 +1,8 @@
-const StoreOperations = require("./storeOperations");
+const IProduct = require("./iProduct");
+const ISales = require("./iSales");
 
 class Salesperson {
-  constructor() {
-    // No se instancia directamente la interfaz StoreOperations
-    // this.store = new StoreOperations();
-  }
+  constructor() { }
 
   /**
    * @param {string} product - Producto a agregar.
@@ -21,15 +19,6 @@ class Salesperson {
     // Implementación de processOrder específica de Salesperson
     console.log(`Salesperson: Procesando pedido ${order}`);
   }
-
-  // No se implementan los métodos no necesarios
-  // /**
-  //  * @param {string} product - Producto a actualizar.
-  //  * @param {number} newPrice - Nuevo precio del producto.
-  //  */
-  // updatePrice(product, newPrice) {}
-
-  // generateSalesReport() {}
 }
 
 module.exports = Salesperson;

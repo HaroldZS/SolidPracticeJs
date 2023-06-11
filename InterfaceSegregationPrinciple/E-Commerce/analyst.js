@@ -1,10 +1,9 @@
-const StoreOperations = require("./storeOperations");
+const IProduct = require("./iProduct");
+const IManagement = require("./iManagement");
+const ISales = require("./iSales");
 
 class Analyst {
-  constructor() {
-    // No se instancia directamente la interfaz StoreOperations
-    // this.store = new StoreOperations();
-  }
+  constructor() { }
 
   /**
    * @param {string} product - Producto a agregar.
@@ -31,9 +30,6 @@ class Analyst {
     console.log(`Analyst: Procesando pedido ${order}`);
   }
 
-  /**
-   * Genera un informe de ventas.
-   */
   generateSalesReport() {
     // Implementación de generateSalesReport específica de Analyst
     console.log('Analyst: Generando informe de ventas');
